@@ -1,0 +1,24 @@
+﻿<Window x:Class="AdbTestAssingment.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdbTestAssingment.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="140"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <TextBox Margin="5" Text="{Binding Path=QueryString }"></TextBox>
+            <Button Width="100" HorizontalAlignment="Left" Margin="5 0" Command="{Binding SearchDataCommand}">Search</Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <Button Margin="5" Content="Shut Down Processes" Command="{Binding ShutDownProcessesCommand}"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
